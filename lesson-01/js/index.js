@@ -150,7 +150,7 @@
 //   let message;
 
 //   if (age >= 18) {
-//     // Change this line
+// Change this line
 
 //     message = 'You are an adult';
 //   } else {
@@ -165,3 +165,45 @@
 // checkAge(38);
 
 // 1.16
+
+// function checkStorage(available, ordered) {
+//   let message;
+// Change code below this line
+//   if (available < ordered) {
+//     message = `Not enough goods in stock!`;
+//   } else {
+//     message = `Order is processed, our manager will contact you.`;
+//   }
+// Change code above this line
+//   return message;
+// }
+
+// 1.17
+
+// let a = 5;
+// let b = 10;
+// let c = 15;
+// let d = 20;
+
+// Change code below this line
+// a += 2;
+// b -= 4;
+// c *= 3;
+// d /= 10;
+
+// 1.18
+
+function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
+  let message;
+  // Change code below this line
+  const totalPrice = pricePerDroid * orderedQuantity;
+  if (totalPrice > customerCredits) {
+    message = `Insufficient funds!`;
+  } else {
+    message = `You ordered ${orderedQuantity} droids, you have ${
+      customerCredits - totalPrice
+    } credits left`;
+  }
+  // Change code above this line
+  return message;
+}

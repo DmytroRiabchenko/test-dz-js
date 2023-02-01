@@ -544,23 +544,169 @@
 
 // 1.36
 
-function checkForSpam(message) {
-  let result;
-  // Change code below this line
-  message = message.toLowerCase();
-  if (message.includes('spam') || message.includes('sale')) {
-    result = true;
-  } else {
-    result = false;
-  }
+// function checkForSpam(message) {
+//   let result;
+//   // Change code below this line
+//   message = message.toLowerCase();
+//   if (message.includes('spam') || message.includes('sale')) {
+//     result = true;
+//   } else {
+//     result = false;
+//   }
 
-  // Change code above this line
-  return result;
-}
-console.log(checkForSpam('Latest technology news'));
-console.log(checkForSpam('JavaScript weekly newsletter'));
-console.log(checkForSpam('Get best sale offers now!'));
-console.log(checkForSpam('Amazing SalE, only tonight!'));
-console.log(checkForSpam('Trust me, this is not a spam message'));
-console.log(checkForSpam('Get rid of sPaM emails. Our book in on sale!'));
-console.log(checkForSpam('[SPAM] How to earn fast money?'));
+//   // Change code above this line
+//   return result;
+// }
+// console.log(checkForSpam('Latest technology news'));
+// console.log(checkForSpam('JavaScript weekly newsletter'));
+// console.log(checkForSpam('Get best sale offers now!'));
+// console.log(checkForSpam('Amazing SalE, only tonight!'));
+// console.log(checkForSpam('Trust me, this is not a spam message'));
+// console.log(checkForSpam('Get rid of sPaM emails. Our book in on sale!'));
+// console.log(checkForSpam('[SPAM] How to earn fast money?'));
+
+//TEST=======================================================================
+// const clients = ['Mango', 'Poly', 'Ajax'];
+// const lastElementIndex = clients.length - 1;
+// console.log(lastElementIndex); // 2
+// console.log(clients[lastElementIndex]); // "Ajax"
+//==========================================
+// const clients = ['Mango', 'Ajax', 'Poly'];
+
+// for (let i = 0; i < clients.length; i += 1) {
+//   console.log(clients[i]);
+// }
+//==================================================
+// const clients = ['Mango', 'Ajax', 'Poly'];
+
+// for (const client of clients) {
+//   console.log(client);
+// }
+
+// const string = 'javascript';
+
+// for (const character of string) {
+//   console.log(character);
+// }
+//================================================
+// const clients = ['Mango', 'Poly', 'Ajax'];
+// const clientNameToFind = 'Poly';
+// let message;
+
+// for (const client of clients) {
+//   // На кожній ітерації будемо перевіряти чи збігається елемент масиву з
+//   // іменем клієнта. Якщо збігається - записуємо в message повідомлення
+//   // про успіх і робимо break, щоб далі не шукати
+//   if (client === clientNameToFind) {
+//     message = "Клієнт з таким ім'ям є в базі даних!";
+//     break;
+//   }
+
+//   // Якщо вони не збігаються - записуємо в message повідомлення про відсутність імені
+//   message = "Клієнт з таким ім'ям відсутній в базі даних!";
+// }
+
+// console.log(message);
+
+//=============================================
+// const numbers = [1, 3, 14, 18, 4, 7, 29, 6, 34];
+// const threshold = 15;
+
+// // Для чисел, менших ніж порогове значення, спрацьовує continue, виконання тіла
+// // припиняється і управління передається на наступну ітерацію.
+// for (let i = 0; i < numbers.length; i += 1) {
+//   if (numbers[i] < threshold) {
+//     continue;
+//   }
+
+//   console.log(`Число більше за ${threshold}: ${numbers[i]}`);
+// }
+//==============================================
+// const a = ['Mango'];
+// // Оскільки a - це масив, в b записується посилання на вже існуючий
+// // масив в пам'яті. Тепер a і b вказують на той самий масив.
+// const b = a;
+// console.log(a); // ["Mango"]
+// console.log(b); // ["Mango"]
+
+// // Змінимо масив, додавши ще один елемент, використовуючи вказівник з a
+// a.push('Poly');
+// console.log(a); // ["Mango", "Poly"]
+
+// // b також змінилось, тому що b, як і a,
+// // просто містить посилання на те ж саме місце в пам'яті
+// console.log(b); // ["Mango", "Poly"]
+
+// // Результат повторюється
+// b.push('Ajax');
+// console.log(a); // ["Mango", "Poly", "Ajax"]
+// console.log(b); // ["Mango", "Poly", "Ajax"]
+//=======================================================
+// const words = ['JavaScript', 'це', 'цікаво'];
+// console.log(words.join('')); // "JavaScriptцецікаво"
+// console.log(words.join(' ')); // "JavaScript це цікаво"
+// console.log(words.join('-')); // "JavaScript-це-цікаво"
+//===================================================
+// const clients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
+// console.log(clients.indexOf('Poly')); // 2
+// console.log(clients.indexOf('Monkong')); // -1
+//==============================================
+// Виносимо варіанти в масив
+// const redFruits = ['apple', 'strawberry', 'cherry', 'cranberries'];
+// const fruit = 'cherry';
+// // Перевіряємо присутність елемента
+// const hasFruit = redFruits.includes(fruit);
+
+// if (hasFruit) {
+//   console.log(`${fruit} is a red fruit!`);
+// }
+//===============================================
+// const scores = [1, 2, 3, 4, 5];
+
+// // Видаляємо три елементи масиву, починаючи з першого елемента (індекс 0)
+// const deletedScores = scores.splice(0, 3);
+
+// // Тепер масив scores містить два елементи
+// console.log(scores); // [4, 5]
+
+// // А масив deletedScores містить три видалені елементи
+// console.log(deletedScores); // [1, 2, 3]
+//===========================================
+//
+//
+//
+//
+//
+//
+//============================================ФУНКЦИИ======================================================
+
+// function multiply() {
+//   let total = 10;
+
+//   for (const argument of arguments) {
+//     total *= argument;
+//   }
+
+//   return total;
+// }
+
+// console.log(multiply(2, 2, 3)); //  120
+// console.log(multiply(1, 2, 3, 4)); //  240
+// console.log(multiply(1, 2, 3, 4, 5)); //  1200
+
+////////////////////////////////////////////////////////////////////
+// function bar() {
+//   console.log('bar');
+// }
+
+// function baz() {
+//   console.log('baz');
+// }
+
+// function foo() {
+//   console.log('foo');
+//   bar();
+//   baz();
+// }
+
+// foo();

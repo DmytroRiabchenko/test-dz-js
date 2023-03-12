@@ -679,17 +679,17 @@
 // };
 
 // Change code above this lineclass Car {
-class Car {
-  #brand;
-  constructor({ brand, model, price }) {
-    this.#brand = brand;
-    this.model = model;
-    this.price = price;
-  }
-  getBrand() {
-    return this.#brand;
-  }
-  changeBrand(newBrand) {
-    return (this.#brand = newBrand);
-  }
-}
+// class Car {
+//   #brand;
+//   constructor({ brand, model, price }) {
+//     this.#brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+//   getBrand() {
+//     return this.#brand;
+//   }
+//   changeBrand(newBrand) {
+//     return (this.#brand = newBrand);
+//   }
+// }

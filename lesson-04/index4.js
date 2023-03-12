@@ -677,3 +677,19 @@
 //     .filter(user => user.gender === gender)
 //     .reduce((totalBalance, user) => totalBalance + user.balance, 0);
 // };
+
+// Change code above this lineclass Car {
+class Car {
+  #brand;
+  constructor({ brand, model, price }) {
+    this.#brand = brand;
+    this.model = model;
+    this.price = price;
+  }
+  getBrand() {
+    return this.#brand;
+  }
+  changeBrand(newBrand) {
+    return (this.#brand = newBrand);
+  }
+}
